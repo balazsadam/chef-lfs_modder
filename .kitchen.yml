@@ -1,0 +1,26 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 13.6.4
+  environment_path: '.chef/environments'
+  data_bags_path: '.chef/data_bags'
+  nodes_path: '.chef/nodes'
+  roles_path: '.chef/roles'
+
+platforms:
+  - name: debian-9
+
+suites:
+  - name: default
+    run_list:
+      - recipe[lfs_modder::default]
+    attributes:
+      modules:
+        load:
+          - drbd
+          - ipmi
+          - 8021q
+        remove:

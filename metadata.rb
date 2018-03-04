@@ -1,0 +1,7 @@
+name 'lfs_modder'
+maintainer 'Adam BALAZS'
+maintainer_email 'balazs.adam@lfs.hu'
+license 'all_rights'
+description 'Installs/Configures lfs_modder'
+long_description 'Installs/Configures lfs_modder'
+version '1.0.9'
